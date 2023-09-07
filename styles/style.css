@@ -238,7 +238,8 @@ li {
 }
 
 .product-card {
-  width: 315px;
+  width: 90%;
+  height: 90%;
   position: relative;
   box-shadow: 0 2px 7px #dfdfdf;
   margin: 50px auto;
