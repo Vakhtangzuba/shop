@@ -16,7 +16,7 @@ setTimeout(() => {
 
 // Import Templates
 const headerBAR = document.querySelector(".header");
-fetch("/templates/header.html")
+fetch("templates/header.html")
   .then((res) => res.text())
   .then((data) => {
     headerBAR.innerHTML = data;
