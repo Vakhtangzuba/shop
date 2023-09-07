@@ -14,14 +14,6 @@ setTimeout(() => {
   });
 }, 800);
 
-// Import Templates
-const headerBAR = document.querySelector(".header");
-fetch("templates/header.html")
-  .then((res) => res.text())
-  .then((data) => {
-    headerBAR.innerHTML = data;
-  });
-
 // მონაცემთა გაპარსვა API-დან და HTML-ში დახატვა
 let page = 2;
 let currentPage = 2;
@@ -96,3 +88,20 @@ document.getElementById("loadmore").addEventListener("click", function () {
   getUsersInfoFetch(currentPage);
 });
 getUsersInfoFetch(currentPage);
+
+// Import Templates
+// Import header
+const headerBAR = document.querySelector(".header");
+fetch("./templates/header.html")
+  .then((res) => res.text())
+  .then((data) => {
+    headerBAR.innerHTML = data;
+  });
+
+// Import Footer
+const footerBAR = document.querySelector(".footer");
+fetch("./templates/footer.html")
+  .then((res) => res.text())
+  .then((data) => {
+    footerBAR.innerHTML = data;
+  });

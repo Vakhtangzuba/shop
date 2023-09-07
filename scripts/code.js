@@ -102,15 +102,6 @@ document.getElementById("loadmore").addEventListener("click", function () {
 });
 getUsersInfoFetch(currentPage);
 
-// Import Templates
-
-const headerBAR = document.querySelector(".header");
-fetch("./templates/header.html")
-  .then((res) => res.text())
-  .then((data) => {
-    headerBAR.innerHTML = data;
-  });
-
 // Scroll To Top
 let intervalId = 0; // Stop scrolling at top
 const $scrollButton = document.querySelector(".scroll");
@@ -166,3 +157,20 @@ const executeCodes = () => {
 
 //executeCodes function will be called on webpage load
 window.addEventListener("load", executeCodes);
+
+// Import Templates
+// Import header
+const headerBAR = document.querySelector(".header");
+fetch("./templates/header.html")
+  .then((res) => res.text())
+  .then((data) => {
+    headerBAR.innerHTML = data;
+  });
+
+// Import Footer
+const footerBAR = document.querySelector(".footer");
+fetch("./templates/footer.html")
+  .then((res) => res.text())
+  .then((data) => {
+    footerBAR.innerHTML = data;
+  });
