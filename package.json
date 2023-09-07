@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@glidejs/glide": "^3.6.0",
+    "@splidejs/splide": "^4.1.4",
+    "swiper": "^10.2.0"
+  }
+}

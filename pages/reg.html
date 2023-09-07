@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+    <link
+      href="/CSS/style.css"
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header"></header>
+      <article class="main">
+        <form id="regform" action="#" method="post" name="main_form">
+          <h4>Registration info</h4>
+          <div><label for="username">Name</label></div>
+          <input
+            name="name"
+            id="username"
+            type="text"
+            placeholder="Enter name"
+            maxlength="50"
+            pattern="[A-Za-z]{1,50}"
+            title="Name can not contain numbers"
+          />
+          <div><label for="userLastname">Lastname</label></div>
+          <input
+            name="lastname"
+            id="userLastname"
+            type="text"
+            placeholder="Enter lastname"
+            pattern="[A-Za-z]{1,50}"
+            maxlength="50"
+            title="Lastname can not contain numbersand symbols"
+          />
+
+          <div><label for="userbday">Birthday</label></div>
+          <input
+            type="date"
+            name="birthday"
+            id="userbday"
+            min="1899-01-01"
+            title="Wrong min date"
+          />
+          <div><label for="useremail">Email Address</label></div>
+          <input
+            name="email"
+            id="useremail"
+            type="email"
+            placeholder="Enter email"
+            maxlength="50"
+          />
+          <div><label for="userPass">Password</label></div>
+          <input
+            name="password"
+            id="userPass"
+            type="password"
+            placeholder="Enter password"
+            maxlength="20"
+            pattern=".{6,20}"
+            title="6 to 20 characters"
+          />
+          <div><label for="userConfirmPass">Re-Enter password</label></div>
+          <input
+            name="confirmPassword"
+            id="userConfirmPass"
+            type="password"
+            placeholder="Confirm password"
+            maxlength="20"
+            pattern=".{6,20}"
+            title="6 to 20 characters"
+          />
+          <span id="info"></span>
+          <div><label for="ava">Avatar</label></div>
+          <input
+            type="file"
+            id="ava"
+            type="file"
+            name="myImage"
+            accept="image/x-png,image/gif,image/jpeg"
+            title="Choose avatar"
+          />
+          <input class="button" type="submit" value="Send" name="submit" />
+        </form>
+      </article>
+
+      <footer class="footer">
+        <h1>Footer</h1>
+      </footer>
+    </div>
+    <script src="/JS/registration.js" async></script>
+  </body>
+</html>

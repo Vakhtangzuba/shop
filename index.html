@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <script
+      type="module"
+      src="node_modules/@splidejs/splide/dist/js/splide.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="node_modules/@splidejs/splide/dist/css/splide.min.css"
+    /> -->
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+    <link
+      href="css/style.css"
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- <script type="module">
+      import Splide from "@splidejs/splide";
+      import "@splidejs/splide/css";
+    </script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header"></header>
+      <article class="main">
+        <section class="splide" aria-labelledby="carousel-heading">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img
+                  src="assets/slider/img1.jpg"
+                  style="width: 100%; height: 400"
+                  alt=""
+                />
+              </li>
+              <li class="splide__slide">
+                <img
+                  src="assets/slider/img2.jpg"
+                  style="width: 100%; height: 400"
+                  alt=""
+                />
+              </li>
+              <li class="splide__slide">
+                <img
+                  src="assets/slider/img3.jpg"
+                  style="width: 100%; height: 400"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum dolore
+          doloremque provident aspernatur reiciendis repellendus, reprehenderit
+          ducimus officia, ratione consequuntur sint in placeat omnis quibusdam
+          dolorem minima, iure aut similique!
+        </p>
+
+        <section id="prods" class="products"></section>
+        <div class="button-div">
+          <button id="loadmore" class="load-more-class">Load More</button>
+        </div>
+      </article>
+      <aside class="aside aside1">
+        <nav class="left aside">
+          <ul class="aside1-ul">
+            <li><a class="active" href="#">Phones</a></li>
+            <li><a href="#">Electoincs</a></li>
+            <li><a href="#">Notebooks</a></li>
+            <li><a href="#">Hardware</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <aside class="aside aside2">
+        <div class="aside2-box">Get best LAPTOP in best price</div>
+        <img class="side2-image" src="assets/images/side-image.jpg" alt="" />
+      </aside>
+      <footer class="footer">
+        <h1>Footer</h1>
+      </footer>
+      <div class="wrapper-cookies">
+        <header>
+          <i class="bx bx-cookie"></i>
+          <h2>Cookies Consent</h2>
+        </header>
+
+        <div class="data">
+          <p>
+            We are using Cookies on our website for your best servce and
+            experience
+            <a
+              href="https://www.oberlo.com/blog/ecommerce-about-page-templates"
+              target="_blank"
+            >
+              Read more...</a
+            >
+          </p>
+        </div>
+
+        <div class="buttons">
+          <button class="button" id="acceptBtn">Accept</button>
+          <button class="button" id="declineBtn">Decline</button>
+        </div>
+      </div>
+    </div>
+    <button id="totop" title="Back to top" class="scroll">
+      <span class="arrow-up glyphicon glyphicon-chevron-up">TOP</span>
+    </button>
+    <script type="module" src="JS/code.js"></script>
+  </body>
+</html>
