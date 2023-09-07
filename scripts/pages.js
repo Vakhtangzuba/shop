@@ -1,18 +1,27 @@
 "use strict";
-// მენიუს ღილაკი მცირე ზომის მოწყობილობებზე
+
+// Header-ის toggle რესპონსივზე
 setTimeout(() => {
   $("#icon").click(function () {
     $(".header-ul").toggleClass("show");
   });
 }, 800);
 
-// Set ACTIVE class to meni items
+// მენიუზე active როდესაც კონკრეტულ გვერდზე გადადიხარ
 setTimeout(() => {
-  $("ul li a").click(function () {
-    $("li a").removeClass("active");
-    $(this).addClass("active");
+  $("li a").removeClass("active");
+  let navLinks = document.querySelectorAll(".nav_link");
+  let windowPathname = window.location.pathname;
+
+  navLinks.forEach((navLink) => {
+    let navLinkPathname = new URL(navLink.href).pathname;
+    console.log(navLink.href);
+
+    if (windowPathname === navLinkPathname) {
+      navLink.classList.add("active");
+    }
   });
-}, 800);
+}, 10);
 
 // მონაცემთა გაპარსვა API-დან და HTML-ში დახატვა
 let page = 2;

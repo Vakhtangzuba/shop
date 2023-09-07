@@ -2,22 +2,29 @@
 
 new Splide(".splide").mount();
 
-// import Splide from "@splidejs/splide";
-// import "@splidejs/splide/css";
-// მენიუს ღილაკი მცირე ზომის მოწყობილობებზე
-
-// JQuery ვერ ავამუშავე, ამიტომ setTimeout გამოვიყენე
-// $(document).ready(function () {
-//   $("#icon").click(function () {
-//     $(".header-ul").toggleClass("show");
-//   });
-// });
-
+// Header-ის toggle რესპონსივზე
 setTimeout(() => {
   $("#icon").click(function () {
     $(".header-ul").toggleClass("show");
   });
 }, 800);
+
+// მენიუზე active როდესაც კონკრეტულ გვერდზე გადადიხარ
+setTimeout(() => {
+  // $("li a").removeClass("active");
+  let navLinks = document.querySelectorAll(".nav_link");
+  let windowPathname = window.location.pathname;
+
+  console.log(windowPathname);
+
+  navLinks.forEach((navLink) => {
+    let navLinkPathname = new URL(navLink.href).pathname;
+
+    if (windowPathname === navLinkPathname) {
+      navLink.classList.add("active");
+    }
+  });
+}, 10);
 
 // Set ACTIVE class to meni items
 setTimeout(() => {
@@ -25,7 +32,7 @@ setTimeout(() => {
     $("li a").removeClass("active");
     $(this).addClass("active");
   });
-}, 800);
+}, 10);
 
 // მონაცემთა გაპარსვა API-დან და HTML-ში დახატვა
 let page = 2;
